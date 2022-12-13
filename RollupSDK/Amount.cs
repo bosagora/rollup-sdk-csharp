@@ -1,5 +1,3 @@
-using Nethereum.Contracts.Standards.ENS.ETHRegistrarController.ContractDefinition;
-
 namespace BOSagora.Rollup.BlockChain;
 using System.Numerics;
 
