@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BOSagora.Rollup.BlockChain
+﻿namespace BOSagora.Rollup.BlockChain
 {
     public class Utils
     {

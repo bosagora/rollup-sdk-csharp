@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-
-namespace BOSagora.Rollup.BlockChain
+﻿namespace BOSagora.Rollup.BlockChain
 {
     /// <summary>
     /// The Class for hash

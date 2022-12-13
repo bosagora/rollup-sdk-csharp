@@ -1,9 +1,7 @@
 ﻿using Nethereum.Web3.Accounts;
 using Nethereum.Signer;
-using System;
 using System.Numerics;
 using System.Text;
-
 
 namespace BOSagora.Rollup.BlockChain
 {
