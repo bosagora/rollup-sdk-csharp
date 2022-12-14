@@ -112,26 +112,23 @@ namespace BOSagora.Rollup.BlockChain
         public void Sign(Account account)
         {
             signer = account.Address;
-            var msg = ToHash().ToString();
             var messageSigner = new EthereumMessageSigner();
-            signature = messageSigner.EncodeUTF8AndSign(msg, new EthECKey(account.PrivateKey));
+            signature = messageSigner.Sign(ToHash().data, new EthECKey(account.PrivateKey));
         }
 
         public void Sign(string privateKey)
         {
 	        var account = new Account(privateKey);
 	        signer = account.Address;
-	        var msg = ToHash().ToString();
 	        var messageSigner = new EthereumMessageSigner();
-	        signature = messageSigner.EncodeUTF8AndSign(msg, new EthECKey(account.PrivateKey));
+	        signature = messageSigner.Sign(ToHash().data, new EthECKey(account.PrivateKey));
         }
 
         public bool Verify()
         {
-            var msg = ToHash().ToString();
             var messageSigner = new EthereumMessageSigner();
-            var res = messageSigner.EncodeUTF8AndEcRecover(msg, signature);
-            return res.ToLower() == signer.ToLower();
+            var res = messageSigner.EcRecover(ToHash().data, signature);
+            return res.ToLower().Equals(signer.ToLower());
         }
     }
 }

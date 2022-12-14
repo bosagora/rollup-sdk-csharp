@@ -409,7 +409,6 @@ public class Tests
         Assert.That(h.ToString(), Is.EqualTo("0xbe8d68621ec431150e285249e4b8f2d16b97564da11a46211a29b822cabf0fdb"));
         Assert.True(tx.Verify());
         var json = tx.ToJSON();
-        Console.WriteLine(json);
-        Assert.That(json, Is.EqualTo("{\"sequence\":0,\"trade_id\":\"12345678\",\"user_id\":\"0x064c9Fc53d5936792845ca58778a52317fCf47F2\",\"state\":\"0\",\"amount\":\"1234567800000000000\",\"timestamp\":1668044556,\"exchange_user_id\":\"997DE626B2D417F0361D61C09EB907A57226DB5B\",\"exchange_id\":\"a5c19fed89739383\",\"signer\":\"0x19dCAc1131Dfa2fdBbf992261d54c03dDE616D75\",\"signature\":\"0x315ea7fb206e78a2a1ab3d1a6d07425932a16270ec2059915e2581416dad783050f031d01f5887348d32b5dc685984ff52aa5da744d4225da8486f2ba37f6b571c\"}"));
+        Assert.That(json, Is.EqualTo("{\"sequence\":0,\"trade_id\":\"12345678\",\"user_id\":\"0x064c9Fc53d5936792845ca58778a52317fCf47F2\",\"state\":\"0\",\"amount\":\"1234567800000000000\",\"timestamp\":1668044556,\"exchange_user_id\":\"997DE626B2D417F0361D61C09EB907A57226DB5B\",\"exchange_id\":\"a5c19fed89739383\",\"signer\":\"0x19dCAc1131Dfa2fdBbf992261d54c03dDE616D75\",\"signature\":\"0xc4aa8123a9d1c0e9d7a7d1763532016cdfdf0585c674919e7dd765c2df1f1b4b0ca9f1170aec0be013abd7d198713a8e6af7242f24228fe2cb0b727664ca86441b\"}"));
     }
 }
